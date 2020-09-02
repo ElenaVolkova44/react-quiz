@@ -2,8 +2,17 @@ import React from "react";
 import classes from './AnswerItem.module.css';
 
 const AnswerItem = props => {
+   const cls = [classes.AnswerItem];
+
+   if(props.state) {
+      cls.push(classes[props.state]);
+   }
+
    return (
-      <li className={classes.AnswerItem}>
+      <li
+         onClick={() => props.onAnswerClick(props.answer.id)}
+         className={cls.join(' ')}
+      >
          {props.answer.text}
       </li>
    )

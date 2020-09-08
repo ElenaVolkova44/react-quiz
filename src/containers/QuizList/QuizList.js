@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import classes from './QuizList.module.css';
-import {NavLink, useHistory} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import axios from '../../axios/axiosQuiz';
 import Loader from "../../components/UI/Loader/Loader";
 
@@ -16,18 +16,13 @@ class QuizList extends Component {
             <li
                key={quiz.id}
             >
-               <NavLink to={'/quiz/' + quiz.id} toListHandler={this.toListHandler}>
+               <NavLink to={'/quiz/' + quiz.id}>
                   {quiz.name}
                </NavLink>
             </li>
          )
       })
    }
-
-
-   toListHandler = () => {
-      useHistory().push("/");
-   };
 
    async componentDidMount() {
       try {

@@ -94,7 +94,6 @@ class Quiz extends Component {
                            results={this.state.results}
                            quiz={this.state.quiz}
                            onRetry={this.retryHandler}
-                           toListHandler={this.props.toListHandler}
                         /> :
 
                         <ActiveQuiz

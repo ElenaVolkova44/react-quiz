@@ -39,6 +39,7 @@ const FinishedQuiz = props => {
                type='primary'
             >Повторить</Button>
             <Button
+               onClick={props.toListHandler}
                type='success'
             >Перейти в список тестов</Button>
          </div>
